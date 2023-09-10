@@ -99,6 +99,8 @@ public class Policy {
       policyholderWeight = weight;
    }
    
+   // Other methods
+   
    public double policyholderBMI() {
       double bmi = (policyholderWeight * 703) / Math.pow(policyholderHeight, 2);
       return bmi;
