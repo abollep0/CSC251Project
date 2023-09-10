@@ -76,11 +76,11 @@ public class Policy {
    }
    
    public void setPolicyholderFirstName(String fname) {
-      policyholderFirstname = fname;
+      policyholderFirstName = fname;
    }
    
    public void setPolicyholderLastName(String lname) {
-      policyholderLastname = lname;
+      policyholderLastName = lname;
    }
    
    public void setPolicyholderAge(int age) {
@@ -113,12 +113,12 @@ public class Policy {
          fee += 75;
       }
       
-      if (policyholderSmokingStatus.equals("smoker") {
+      if (policyholderSmokingStatus.equalsIgnoreCase("smoker")) {
          fee += 100;
       }
       
       if (policyholderBMI() > 35) {
-         fee += (policyholderBMI - 35) * 20;
+         fee += (policyholderBMI() - 35) * 20;
       }
       
       return fee;
