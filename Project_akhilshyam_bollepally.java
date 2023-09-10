@@ -26,6 +26,6 @@ public class Project_akhilshyam_bollepally {
       Policy person = new Policy(num,name,fname,lname,age,smokingStatus,height,weight);
       
       System.out.printf("Policy Number: %d\n\nProvider Name: %s\n\nPolicyholder’s First Name: %s\n\nPolicyholder’s Last Name: %s\n\nPolicyholder’s Age: %d", num,name,fname,lname,age);
-      System.out.printf("\nPolicyholder’s Height: %.1f\n\nPolicyholder’s Weight: %.1f\n\nPolicyholder’s BMI: %.2f\n\nPolicy Price: $%,.2f",height,weight,person.policyholderBMI(),person.calculatePrice());
+      System.out.printf("\n\nPolicyholder’s Height: %.1f\n\nPolicyholder’s Weight: %.1f\n\nPolicyholder’s BMI: %.2f\n\nPolicy Price: $%,.2f",height,weight,person.policyholderBMI(),person.calculatePrice());
    }
 }
