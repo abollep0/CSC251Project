@@ -18,18 +18,27 @@ public class Project_akhilshyam_bollepally {
       
       while (informationList.hasNext()) {
          nums.add(informationList.nextInt());
+         informationList.nextLine();
          names.add(informationList.nextLine());
          fnames.add(informationList.nextLine());
          lnames.add(informationList.nextLine());
          ages.add(informationList.nextInt());
+         informationList.nextLine();
          smokingStatuses.add(informationList.nextLine());
          heights.add(informationList.nextDouble());
          weights.add(informationList.nextDouble());
-         informationList.nextLine();
+         if (informationList.hasNext()) {
+            informationList.nextLine();
+         } if (informationList.hasNext()) {
+            informationList.nextLine();
+         }
       }
-      /*
-      System.out.printf("Policy Number: %d\n\nProvider Name: %s\n\nPolicyholder’s First Name: %s\n\nPolicyholder’s Last Name: %s\n\nPolicyholder’s Age: %d", num,name,fname,lname,age);
-      System.out.printf("\n\nPolicyholder’s Height: %.1f\n\nPolicyholder’s Weight: %.1f\n\nPolicyholder’s BMI: %.2f\n\nPolicy Price: $%,.2f",height,weight,person.policyholderBMI(),person.calculatePrice());
-      */
+      
+      for (int i = 0;i < nums.size();i++) {
+         people.add(new Policy(nums.get(i),names.get(i),fnames.get(i),lnames.get(i),ages.get(i),smokingStatuses.get(i),heights.get(i),weights.get(i)));
+      }
+      
+      for (Policy person: people)
+         System.out.printf("$%.2f\n",person.calculatePrice());
    }
 }
