@@ -2,12 +2,7 @@ public class Policy
 {  //fields
    private String policyNumber;
    private String providerName;
-   private String FirstName;
-   private String LastName;
-   private int age;
-   private String smokingStatus;
-   private double height;
-   private double weight;
+   private PolicyHolder policyHolder;
 
    /**
    No-arg constructor that explicitly initializes all fields
@@ -16,12 +11,7 @@ public class Policy
    {
       policyNumber = "";
       providerName = "";
-      FirstName = "";
-      LastName = "";
-      age = 0;
-      smokingStatus = "";
-      height = 0;
-      weight = 0;
+      policyHolder = new policyHolder("","",0,"",0,0);
    }
    
    /**
@@ -39,12 +29,7 @@ public class Policy
    {
       policyNumber = pNumber;
       providerName = pName;
-      FirstName = fName;
-      LastName = lName;
-      age = a;
-      smokingStatus = sStatus;
-      height = h;
-      weight = w;
+      policyHolder = (fname,lname,a,sStatus,h,w);
    }
    
    //getters//
@@ -64,54 +49,9 @@ public class Policy
       return providerName;
    }
    
-   /**
-   @return The Policyholder's first name
-   */
-   public String getFirstName()
-   {
-      return FirstName;
-   }
-   
-   /**
-   @return The Policyholder's last name
-   */
-   public String getLastName()
-   {
-      return LastName;
-   }
-   
-   /**
-   @return The Policyholder's age
-   */
-   public int getAge()
-   {
-      return age;
-   }
-   
-   /**
-   @return The Policyholder's smoking status
-   */
-   public String getSmokingStatus()
-   {
-      return smokingStatus;
-   }
-   
-   /**
-   @return The Policyholder's height
-   */
-   public double getHeight()
-   {
-      return height;
-   }
-   
-   /**
-   @return The Policyholder's weight
-   */
-   public double getWeight()
-   {
-      return weight;
-   }
-   
+   public PolicyHolder getPolicyHolder() {
+      return new PolicyHolder(policyHolder);
+   }  
    //setters//
    
    /**
